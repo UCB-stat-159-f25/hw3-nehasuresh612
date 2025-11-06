@@ -1,6 +1,0 @@
-tqdm
-scipy
-h5py
-matplotlib
-ipykernel
-pytest
