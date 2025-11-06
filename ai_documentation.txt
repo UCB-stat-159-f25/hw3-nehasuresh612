@@ -1,0 +1,15 @@
+## Query 1
+can you help me find the error in this code error: subprocess-exited-with-error
+
+That's a frustrating error! This traceback is very common when you're using setuptools with dynamic configuration via pyproject.toml, specifically when trying to read the version from a file.
+
+The core error is right at the end of the traceback:
+
+ModuleNotFoundError: ligotools
+
+This means that when pip and setuptools try to run the build process, they try to find and import the module ligotools to get the value of __version__ for the line:
+
+Ini, TOML
+
+version = {attr = "ligotools.__version__"}
+
